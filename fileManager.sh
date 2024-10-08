@@ -22,6 +22,8 @@ case $choice in
     
     2)
         # code to rename a file or directory
+        echo "Enter name.extension for file and only name for folder \n e.g. test.txt for file and test for folder";
+        read -p "Enter file name or folder " name
         ;;
     
     3)
