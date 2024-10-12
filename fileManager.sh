@@ -8,8 +8,8 @@ read choice
 case $choice in
     1)
         # code to create a file or directory
-        echo "Enter name.extension for file and only name for folder \n e.g. test.txt for file and test for folder";
-        read -p "Enter file name or folder " name
+        echo -e "Enter name.extension for file and only name for folder \n e.g. test.txt for file and test for folder";
+        read -p "Enter file name or folder : " name
         if [[ $name == *.* ]];
         then
           touch $name;
@@ -22,7 +22,7 @@ case $choice in
     
     2)
         # code to rename a file or directory
-        echo "Enter name.extension for file and only name for folder \n e.g. test.txt for file and test for folder";
+        echo -e "Enter name.extension for file and only name for folder \n e.g. test.txt for file and test for folder";
         read -p "Enter current file name or folder to rename : " name
         read -p "Enter new name for file or folder : " new_name
         mv $name $new_name
@@ -31,6 +31,16 @@ case $choice in
     
     3)
         # code to delete a file or directory
+        echo -e "Enter name.extension for file and only name for folder \n e.g. test.txt and test for folder";
+        read name
+
+        if [[ $name = "*.*" ]];
+        then
+            rm $name
+        else
+            rmdir $name
+        fi
+        echo -e "Successfully deleted $name \n"
         ;;
     
     4) 
