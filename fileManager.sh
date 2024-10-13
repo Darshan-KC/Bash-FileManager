@@ -45,6 +45,9 @@ case $choice in
     
     4) 
         # code to move a file or directory
+        echo -e "Enter name.extension for file and only name for folder \n e.g. test.txt for file and test for folder";
+        read -p "Enter file name or folder to move : " name
+        read -p "Enter path or folder where to move : " dest
         ;;
 
     5)
