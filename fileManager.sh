@@ -2,7 +2,7 @@
 
 #! /bin/bash
 
-echo "Choose an operation: (1) Create (2) Rename (3) Delete (4) Move (5) Exit "
+echo "Choose an operation: (1) Create (2) Rename (3) Delete (4) Move"
 read choice
 
 case $choice in
@@ -48,10 +48,9 @@ case $choice in
         echo -e "Enter name.extension for file and only name for folder \n e.g. test.txt for file and test for folder";
         read -p "Enter file name or folder to move : " name
         read -p "Enter path or folder where to move : " dest
-        ;;
+        mv $name $dest
 
-    5)
-        # Exit
+        echo -e "$name successfully to $dest path \n"
         ;;
     
     *)
